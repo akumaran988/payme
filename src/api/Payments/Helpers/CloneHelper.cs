@@ -1,0 +1,19 @@
+﻿using System.IO;
+using System.Xml.Serialization;
+
+namespace Com.PaymentApi.Helpers
+{
+    public static class CloneHelper
+    {
+        public static T CreateDeepCopy<T>(this T obj) where T : new()
+        {
+            using (var ms = new MemoryStream())
+            {
+                XmlSerializer serializer = new XmlSerializer(obj.GetType());
+                serializer.Serialize(ms, obj);
+                ms.Seek(0, SeekOrigin.Begin);
+                return (T)serializer.Deserialize(ms);
+            }
+        }
+    }
+}
