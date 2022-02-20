@@ -1,2 +1,8 @@
 
 *.dll
+*.pdb
+*.cache
+src/api/Payments/obj/
+src/api/Payments/bin/
+payme/
+.DS_Store
