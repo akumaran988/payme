@@ -4,5 +4,7 @@
 *.cache
 src/api/Payments/obj/
 src/api/Payments/bin/
-payme/
 .DS_Store
+payme/.vs/payme/xs/UserPrefs.xml
+payme/.vs/payme/xs/project-cache/PaymentApi-Debug.json
+.vs/payme/xs/UserPrefs.xml
